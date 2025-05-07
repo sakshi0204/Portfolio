@@ -1,0 +1,402 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* Header Section */
+.header {
+    background-color: #333;
+    padding: 20px 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.menu {
+    flex-grow: 1;
+    text-align: right;
+}
+
+.menu-list {
+    display: flex;
+    list-style: none;
+}
+
+.menu-list-items {
+    margin-left: 20px;
+}
+
+.menu-list-items a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.menu-list-items a:hover {
+    background-color: #444;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 100px;
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.circle-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-image-container img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.intro {
+    flex: 2;
+    text-align: left;
+    padding-left: 50px;
+}
+
+.intro h3 {
+    font-size: 22px;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.intro h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.intro h4 {
+    font-size: 24px;
+    color: #ccc;
+    margin-bottom: 20px;
+}
+
+.intro-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.common-btn, .ghost-btn {
+    padding: 12px 25px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.common-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.common-btn:hover {
+    background-color: #45a049;
+}
+
+.ghost-btn {
+    background-color: transparent;
+    color: #4CAF50;
+    border: 2px solid #4CAF50;
+    transition: background-color 0.3s ease;
+}
+
+.ghost-btn:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 80px 100px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.portfolio-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.my-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Aligns the cards centrally */
+    gap: 30px; /* Space between the cards */
+}
+
+.my-col {
+    flex: 1 1 30%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center; /* Centers the card inside the column */
+}
+
+.my-card {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 450px; /* Ensures all cards have the same minimum height */
+    align-items: flex-start; /* Aligns content from top */
+    height: auto; /* Ensures card height adjusts according to content */
+}
+
+.my-card:hover {
+    transform: translateY(-10px);
+}
+
+/* Image handling */
+.my-card .image {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 75%; /* Aspect ratio of 4:3 (height = 75% of width) */
+}
+
+.my-card .image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures the image fills the container */
+    border-radius: 10px;
+}
+
+.greet-heading {
+    font-size: 22px;
+    color: #333;
+    margin-top: 15px;
+}
+
+.blue-text {
+    color: #4CAF50;
+}
+
+.small-para {
+    color: #777;
+    font-size: 14px;
+    
+}
+
+.my-card .greet-heading,
+.my-card .small-para {
+    margin-bottom: 20px;
+}
+
+
+
+/* Contact Section */
+.contact {
+    padding: 80px 100px;
+ 
+}
+
+.contact-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+
+/* Footer Section */
+.footer {
+    background-color: #333;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer h4 {
+    font-size: 16px;
+}
+
+/* Skills Section */
+.skills {
+    
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.skills-heading {
+    text-align: center; /* Centering the heading */
+    margin-bottom: 50px;
+    
+    font-size: 30px;
+    color: #333;
+}
+
+.skills-content .my-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    max-width: 1200px;
+}
+
+.my-col {
+    flex: 1 1 30%;
+    max-width: 300px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.skill-block {
+    background-color: #fff;
+    padding: 30px;
+    border-left: 5px solid #4CAF50;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, border-left 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 280px;
+    align-items: flex-start;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.skill-block:hover {
+    transform: translateY(-10px);
+    border-left: 5px solid #45a049;
+}
+
+.skill-title {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.skill-percentage {
+    font-size: 16px;
+    color: #555;
+}
+
+/* Education Section */
+.education {
+    padding: 80px 100px;
+    background-color: #fff;
+    color: #333;
+}
+
+.education-heading {
+    text-align: center; /* Centering the heading */
+    margin-bottom: 50px;
+    font-size: 30px;
+    color: #333;
+}
+
+.education-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+}
+
+.education-item h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.education-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+.education-item .date {
+    font-size: 14px;
+    color: #999;
+}
+
+/* Experience Section */
+.experience {
+    padding: 80px 100px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.experience-heading {
+    text-align: center; /* Centering the heading */
+    margin-bottom: 50px;
+    font-size: 30px;
+    color: #333;
+}
+
+.experience-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+}
+
+.experience-item h3 {
+    font-size: 24px;
+    color: #333;
+}
+
+.experience-item p {
+    font-size: 16px;
+    color: #666;
+}
+
+.experience-item .date {
+    font-size: 14px;
+    color: #999;
+}
